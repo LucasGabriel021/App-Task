@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import NovaTarefa from './components/NovaTarefa';
-import ListaTarefas from './components/ListaTarefas ';
+import ListaTarefas from './components/ListaTarefas';
 
 function App() {
   const [tarefas, setTarefas] = useState([
