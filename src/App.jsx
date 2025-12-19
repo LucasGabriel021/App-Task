@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import NovaTarefa from './components/NovaTarefa';
-import TarefasPendentes from './components/TarefasPendentes';
+import ListaTarefas from './components/ListaTarefas';
 
 function App() {
   const [tarefas, setTarefas] = useState([
@@ -15,7 +15,8 @@ function App() {
     <>
       <Cabecalho />
       <NovaTarefa tarefas={tarefas} setTarefas={setTarefas} />
-      <TarefasPendentes tarefas={tarefas} setTarefas={setTarefas}/>
+      <ListaTarefas titulo="Tarefas Pendentes:" status="pendentes" tarefas={tarefas} setTarefas={setTarefas}/>
+      <ListaTarefas titulo="Tarefas Concluídas:" status="concluida" tarefas={tarefas} setTarefas={setTarefas}/>
     </>
   )
 }
