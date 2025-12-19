@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ListaTarefas({ tarefas, setTarefas }) {
+export default function TarefasPendentes({ tarefas, setTarefas }) {
 
     function concluirTarefa(tarefa) {
         const index = tarefas.findIndex((item) => item.id === tarefa.id);
