@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Cabecalho from './components/Cabecalho'
-import NovaTarefa from './components/NovaTarefa';
-import ListaTarefas from './components/ListaTarefas';
+import Cabecalho from './components/Cabecalho/Cabecalho'
+import NovaTarefa from './components/NovaTarefa/NovaTarefa';
+import ListaTarefas from './components/ListaTarefas/ListaTarefas';
 
 function App() {
   const [tarefas, setTarefas] = useState([
