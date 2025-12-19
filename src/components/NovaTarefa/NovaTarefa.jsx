@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from "./NovaTarefa.module.css"
 
 export default function NovaTarefa({tarefas, setTarefas}) {
   const [titulo, setTitulo] = useState('');
@@ -22,7 +23,7 @@ export default function NovaTarefa({tarefas, setTarefas}) {
 
   return (
     <div className="nova-tarefa">
-        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)}/>
+        <input type="text" className={styles.inputText} value={titulo} onChange={(e) => setTitulo(e.target.value)}/>
         <button type="button" onClick={novaTarefa}>
             Nova Tarefa
         </button>
