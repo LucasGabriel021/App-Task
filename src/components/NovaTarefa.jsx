@@ -1,13 +1,14 @@
 import React from 'react'
 
-export default function NovaTarefa(props) {
+export default function NovaTarefa({tarefas, setTarefas}) {
 
     function novaTarefa() {
         const input = document.querySelector("div.nova-tarefa input");
         if(input.value === "") return;
-        const id = props.tarefas[props.tarefas.length - 1].id + 1;
+
+        const id = tarefas[tarefas.length - 1].id + 1;
         const novaTarefa = { id, titulo: input.value, completa: false};
-        props.setTarefas([...props.tarefas, novaTarefa]);
+        setTarefas([...tarefas, novaTarefa]);
     }
 
   return (

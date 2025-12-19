@@ -1,28 +1,28 @@
 import React from 'react'
 
-export default function ListaTarefas (props) {
+export default function ListaTarefas({ tarefas, setTarefas }) {
 
     function concluirTarefa(tarefa) {
-        const index = props.tarefas.findIndex((item) => item.id === tarefa.id);
-        props.tarefas[index].completa = true;
-        props.setTarefas([...props.tarefas])
+        const index = tarefas.findIndex((item) => item.id === tarefa.id);
+        tarefas[index].completa = true;
+        setTarefas([...tarefas])
     }
 
-  return (
-    <div className="lista-tarefas">
-      <h2>Tarefas Pendentes:</h2>
-      {
-        props.tarefas
-        .filter(item => !item.completa)
-        .map((item) => (
-            <div key={item.id} className="tarefa">
-                <span>{item.titulo}</span>
-                <button type="button" onClick={() => concluirTarefa(item)}>
-                    Concluir
-                </button>
-            </div>
-        ))
-      }
-    </div>
-  )
+    return (
+        <div className="lista-tarefas">
+            <h2>Tarefas Pendentes:</h2>
+            {
+                tarefas
+                    .filter(item => !item.completa)
+                    .map((item) => (
+                        <div key={item.id} className="tarefa">
+                            <span>{item.titulo}</span>
+                            <button type="button" onClick={() => concluirTarefa(item)}>
+                                Concluir
+                            </button>
+                        </div>
+                    ))
+            }
+        </div>
+    )
 }
