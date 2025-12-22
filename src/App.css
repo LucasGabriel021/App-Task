@@ -1,8 +1,24 @@
-@import "tailwindcss";
+/*
+    Declaração de variáveis
+*/
+:root {
+    --gray700: #0d0d0d;
+    --gray600: #1a1a1a; 
+}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        var(--gray700) 0%,
+        var(--gray700) 20%,
+        var(--gray600) 20%,
+        var(--gray600) 100%
+    );
+}
+
+.app-container {
+    max-width: 736px;
+    width: 736px;
 }
