@@ -26,10 +26,6 @@ export default function Header() {
         setTitle('');
     }
 
-    useEffect(() => {
-        console.log("Lista atualizada", tasks)
-    }, [tasks])
-
     return (
         <header className='w-full flex flex-col items-center gap-y-8 py-24'>
             <img src={Logo} className={styles.logo} />
