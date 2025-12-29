@@ -31,7 +31,7 @@ export default function Header() {
             <img src={Logo} className={styles.logo} />
             <div className='flex gap-x-2 app-container'>
                 <Input value={title} onChange={(e) => setTitle(e.target.value)} />
-                <Button texto="Criar" onClick={handleCreateTask} />
+                <Button texto="Criar" onClick={handleCreateTask} icone={true} variant='primary'/>
             </div>
         </header>
     )

@@ -22,7 +22,7 @@ export default function SectionTask() {
                     </span>
                 </div>
             </div>
-            {tasks.length != 0 ? <List /> : <MessageEmpty />}   
+            {tasks.length != 0 ? <List/> : <MessageEmpty />}   
         </section>
     )
 }
